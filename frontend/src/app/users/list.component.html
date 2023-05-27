@@ -1,0 +1,26 @@
+﻿<h1>Пользователи</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 25%">Имя</th>
+            <th style="width: 25%">Фамилия</th>
+            <th style="width: 25%">Логин</th>
+            <th style="width: 25%">Электропочта</th>
+            <th style="width: 10%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
